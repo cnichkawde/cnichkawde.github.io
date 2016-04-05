@@ -2,7 +2,7 @@ excerpt_separator: ""
 pygments: true
 markdown: kramdown
 url: http://cnichkawde.github.io
-title: Musings on complex systems and artificial intelligence
+title: Complex systems and artificial intelligence
 tagline: From randomness to order
 description: Making sense of big and complex data sets
 paginate: 5
