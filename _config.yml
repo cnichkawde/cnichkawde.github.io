@@ -1,0 +1,8 @@
+excerpt_separator: ""
+pygments: true
+markdown: kramdown
+url: http://cnichkawde.github.io
+title: Chetan Nichkawde
+tagline: A log of everyday life
+description: My awesome new site
+paginate: 5
