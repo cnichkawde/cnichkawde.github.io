@@ -203,23 +203,7 @@ $$
 \end{equation}
 $$
     
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_project=11117650; 
-var sc_invisible=1; 
-var sc_security="4acfd2b3"; 
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="shopify site
-analytics" href="http://statcounter.com/shopify/"
-target="_blank"><img class="statcounter"
-src="//c.statcounter.com/11117650/0/4acfd2b3/1/"
-alt="shopify site analytics"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
+
 
 The synthetic gradients $\hat{\delta}_i$ are estimated by another set of helper neural network $M_i$ which could also potentially use information from other sources such as the output label information. Similarly, the true input $\mathbf{h_{i-1}}$ can be approximated by a synthetic input $\mathbf{\hat{h}_{i-1}}$ using another helper neural network $I_i$. This in effect decouples every neural interface from the others. All a neural interface has to do is to interrogate about the gradients and the inputs from the helper neural networks who will pass on the information to the neural interface. The neural interface would in turn use this information to update its own parameters. This idea can trivially be extended to backpropagation through time used to train a recurrent neural network. This solves the locking problem.</p>
 <h2 id="Semi-supervised-learning">Semi-supervised learning<a class="anchor-link" href="#Semi-supervised-learning">&#182;</a></h2><p>In a semi-supervised settings, we have two data sources -- 1) labelled data 2) unlabelled data. Generally speaking, labelled data is relatively scarce compared to unlabelled data. The amount of unlabelled data is usually few orders of magnitude more than labelled data. Data labeling is a costly process requiring a human annotator.</p>
@@ -269,5 +253,24 @@ A recent work has carried such randomization even further by directly incorporat
 </div>
     </div>
   </div>
+    
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11117650; 
+var sc_invisible=1; 
+var sc_security="4acfd2b3"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify site
+analytics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11117650/0/4acfd2b3/1/"
+alt="shopify site analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
 </body>
 </html>
