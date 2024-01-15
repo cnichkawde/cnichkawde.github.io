@@ -281,6 +281,7 @@
  
 <p style="margin-top:20px;">
 The table below shows the results on Long Range Arena<d-cite bibtex-key="tay2020long"></d-cite> benchmark which has a set of tasks on data with long sequences.
+</p>
 <table style="width:100%; border-collapse: collapse;">
   <caption>
       <strong>Long Range Arena Benchmark</strong>
@@ -400,6 +401,7 @@ The table below shows the results on Long Range Arena<d-cite bibtex-key="tay2020
     </tr>
   </tbody>
 </table>
+<p>
 We can see that the results for Linear Recurrent Unit (LRU) discussed in this article far exceeds all the Transformers based models. Furthermore, the state space based models are 5 to 10 times faster on inference speed while requiring only 10% of the memory compared to Transformers. The longest context is about 16000 for the task Path-X. All of the Transformer based models are not able to solve this task while LRU has an accuracy of about 94%.
 <em>
 The purpose of this article is to develop a foundational level understanding on how structured state space sequence models work in efficienty modeling long sequences.
@@ -477,7 +479,8 @@ B =  \begin{bmatrix}
   </em>
     We want to have a postive damping to ensure stability. We can easily extend the above analysis to a multi-dimensional system.
     <aside>We want the system to be marginally damped but not overdamped from a deep learning perspective.</aside>
-    
+</p>
+<p>    
 Lets work out the formula for eigenvalues. The characteristic equation is given by:
 <d-math block>
 m\lambda^2 + c\lambda + k = 0
@@ -657,6 +660,7 @@ It is easy to see that the norm of component $$j$$ of $$x$$ at timestamp $$k$$ e
 <p>
   We enforce the condition above making use of Lemma 3.2 in Ref <d-cite bibtex-key="orvieto2023resurrecting"></d-cite> which is given as follows:
   Let $$u_1,u_2$$ be independent uniform random variables on the interval $$[0,1]$$. Let $$0\le r_{\min}\le r_{\max}\le1$$. Compute $$\nu = -\frac{1}{2}\log\left(u_1(r_{\max}^2-r_{\min}^2)+r_{\min}^2\right)$$ and $$\theta = 2\pi u_2 $$. Then $$\exp(-\nu+i\theta)$$ is uniformly distributed on the ring in complex plane $$\mathbb{C}$$ between circles of radii $$r_{\min}$$ and $$r_{\max}$$.
+  </p>
   <d-figure>
     <img src="exponentialinitialization.png" style="height:200px;width:250px;display: block; margin-left: auto; margin-right: auto;margin-top:10px;"/>
     <figcaption style="text-align:center;">
@@ -665,6 +669,7 @@ It is easy to see that the norm of component $$j$$ of $$x$$ at timestamp $$k$$ e
       </a>
     </figcaption>
   </d-figure>
+  <p>
   This is shown in the above figure with $$r_{min} = 0.4$$ and $$r_{max} = 0.9$$.
   This suggests a natural parameterization for $$A$$ as $$\Lambda = \text{diag}(\exp(-\nu + i \theta))$$ with $$\nu$$ and $$\theta$$ as the learnable parameters.
 </p>
@@ -739,7 +744,7 @@ The figure above shows the positive and negative samples for the Path-X task. Th
 </p>
 </d-article>
 
-<d-appendix style="display:block;">
+<d-appendix>
   <d-bibliography src="bibliography.bib"></d-bibliography>
 </d-appendix>
   
